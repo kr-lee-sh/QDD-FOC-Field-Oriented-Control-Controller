@@ -1,5 +1,10 @@
 <img width="1133" height="718" alt="Image" src="https://github.com/user-attachments/assets/87110599-0c98-4c2a-8a04-ff079767408c" />
 
+<img width="2252" height="4000" alt="Image" src="https://github.com/user-attachments/assets/68afee31-9406-4fec-b762-f06444d3badc" />
+<img width="2252" height="4000" alt="Image" src="https://github.com/user-attachments/assets/17689c23-3d25-42ff-ad87-141497b4bfff" />
+<img width="2252" height="4000" alt="Image" src="https://github.com/user-attachments/assets/01bc0047-17e3-4a1c-9a0e-ee158ff1aba7" />
+<img width="2252" height="4000" alt="Image" src="https://github.com/user-attachments/assets/c6327d96-8aa5-4436-80bf-ab036ff62247" />
+
 # QDD-FOC-Field-Oriented-Control-Controller
 
 Open-source FOC motor controller designed for
