@@ -1,3 +1,4 @@
+
 # QDD-FOC-Field-Oriented-Control-Controller
 
 Open-source FOC motor controller designed for
@@ -25,29 +26,31 @@ the following areas:
 ## Main Features
 
 - 3-phase BLDC/PMSM FOC
+- Gate driver
 - STM32-based control
 - Current sensing
-- Gate driver
 - Magnetic encoder
 - Output shaft position sensing
-- CAN communication
-
-## Documentation
-
-- [Project Overview](docs/01_project_overview.md)
-- [QDD Requirements](docs/02_qdd_requirements.md)
-- [Three-Phase Inverter](docs/03_inverter.md)
-- [Gate Driver](docs/04_gate_driver.md)
-- [Current Sensing](docs/05_current_sensing.md)
-- [FOC Algorithm](docs/06_foc.md)
-- [Encoder](docs/07_encoder.md)
-- [PCB Design](docs/08_pcb_design.md)
-- [Testing](docs/09_testing.md)
+- Reduction mechanism
+- RS485 communication
 
 ## Hardware
 
+- NTC
+- EEPROM
+- ROTOR ENCODER
+- OUTPUT ENCODER
+- RS485 COMMUNICATION
+- DC-DC CONVERTER
+- REGULATOR 3.3V, 5V
+- 3-PHASE INVERTER
+- CURRENT SENSING
+
 ## Firmware
 
+- Inverter drive test using open-loop control
+- Rotor encoder sensing test
+- 
 ## License
 
 ## References
