@@ -1,3 +1,4 @@
+<img width="944" height="635" alt="Image" src="https://github.com/user-attachments/assets/5a515fd3-0802-4413-bfdd-c53182108fea" />
 
 # QDD-FOC-Field-Oriented-Control-Controller
 
