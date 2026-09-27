@@ -27,6 +27,9 @@ the following areas:
 
 ## System Architecture
 
+<img width="815" height="454" alt="Image" src="https://github.com/user-attachments/assets/13b7e828-e8c0-43e2-875e-7c0ae10ffcc6" />
+
+
 
 ## Main Features
 
