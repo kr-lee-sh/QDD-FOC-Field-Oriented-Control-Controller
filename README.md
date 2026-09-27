@@ -20,9 +20,13 @@ the following areas:
 - Reduction mechanism
 - Output shaft position sensing
 
+
+## Exploded View
+
+<img width="2137" height="1345" alt="Image" src="https://github.com/user-attachments/assets/e5b00187-19f0-410f-8a91-6aa565b95e28" />
+
 ## System Architecture
 
-![System Architecture](images/system_architecture.png)
 
 ## Main Features
 
