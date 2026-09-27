@@ -29,7 +29,7 @@ the following areas:
 
 <img width="815" height="454" alt="Image" src="https://github.com/user-attachments/assets/13b7e828-e8c0-43e2-875e-7c0ae10ffcc6" />
 
-
+<img width="1163" height="341" alt="Image" src="https://github.com/user-attachments/assets/eca35c09-0e9a-4c69-b991-978b8e5a7e85" />
 
 ## Main Features
 
