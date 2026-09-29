@@ -47,18 +47,18 @@ The configuration for controlling the QDD actuator is as follows:
 The motor shaft encoder is subsequently used to drive the motor via FOC control.
 
 ## Main Features
-
-- 3-phase BLDC/PMSM FOC
+1. 3-phase BLDC/PMSM FOC
 <img width="1163" height="341" alt="Image" src="https://github.com/user-attachments/assets/eca35c09-0e9a-4c69-b991-978b8e5a7e85" />
 
+- This method employs Field Oriented Control (FOC), which controls the motor by transforming phase currents into d-axis and q-axis currents referenced to the rotor. The three-phase currents (Ia, Ib, Ic) measured from the motor are converted into d-q axis currents (Id, Iq) using the electrical angle (theta). Each current is compared against a reference value, and a PI current controller generates voltage commands (Vd, Vq). Subsequently, the d-q axis voltages are converted back into three-phase voltages, and PWM is used to generate inverter switching signals to drive the PMSM. Additionally, feed-forward compensation is applied to compensate for coupling components between the d-axis and q-axis.
 
-- Gate driver 
-- STM32-based control
-- Current sensing
-- Magnetic encoder
-- Output shaft position sensing
-- Reduction mechanism
-- RS485 communication
+2. Gate driver
+3. STM32-based control
+4. Current sensing
+5. Magnetic encoder
+6. Output shaft position sensing
+7. Reduction mechanism
+8. RS485 communication
 
 ## Hardware
 
