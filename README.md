@@ -29,15 +29,30 @@ the following areas:
 
 <img width="815" height="454" alt="Image" src="https://github.com/user-attachments/assets/13b7e828-e8c0-43e2-875e-7c0ae10ffcc6" />
 
+The configuration for controlling the QDD actuator is as follows:
+
+1. It receives commands to be executed from an external device via the interface.
+- Communication utilizes the RS485 standard, which ensures reliable operation even in the presence of external noise; data transmission distances of up to 1,200 meters are achievable when a terminal resistor is installed.
+
+2. The MCU interprets the received data and executes the corresponding commands.
+- Critical data can be stored in the EEPROM for semi-permanent retention.
+
+3. The MCU sends drive commands to the inverter in the form of SVPWM signals.
+- SVPWM is an efficient PWM control method designed to control motors using three-phase inverters.
+- An NTC thermistor is installed near the inverter's MOSFETs, allowing the MCU to monitor MOSFET temperatures in real time; this feature enables system shutdown in the event of overheating.
+
+4. Since the actuator is equipped with a reduction gear, the position of the motor rotor does not align with the position of the actual output shaft.
+- To address this, encoders are installed on both the motor and the output shaft to transmit their respective positions to the MCU in real time.
+- The output shaft encoder is used to determine the position upon initial startup.
+The motor shaft encoder is subsequently used to drive the motor via FOC control.
+
 ## Main Features
 
 - 3-phase BLDC/PMSM FOC
 <img width="1163" height="341" alt="Image" src="https://github.com/user-attachments/assets/eca35c09-0e9a-4c69-b991-978b8e5a7e85" />
 
 
-- Gate driver
-
-- 
+- Gate driver 
 - STM32-based control
 - Current sensing
 - Magnetic encoder
