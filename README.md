@@ -136,3 +136,5 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
 ## License
 
 ## References
+- https://www.unikeyic.com/media/datasheet/1a/ec/f21b/1a/a92c7469140eec31eee517c392211910.pdf
+- https://rozum.com/encoders-in-rdrive-servos/
