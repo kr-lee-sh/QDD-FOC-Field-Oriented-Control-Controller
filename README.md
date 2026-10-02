@@ -114,7 +114,10 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
   - Then, the position of the output shaft is transmitted to the control board via an on-axis encoder mounted on the position-sensing gear.
 
 6. Reduction mechanism
+- Cycloid Gear Simulation
 <img width="756" height="748" alt="Image" src="https://github.com/user-attachments/assets/55ff20ee-2c6d-4384-8a28-389394c1ef4f" />
+  <br>- First, the structure of the cycloid gear was determined using a simulation program.
+  <br>- Next, a cycloid curve was designed using the equation below to manufacture the speed reducer.
 
 7. RS485 communication
 
