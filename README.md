@@ -119,7 +119,7 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
   <br>- First, the structure of the cycloid gear was determined using a simulation program.
   <br>- Next, a cycloid curve was designed using the equation below to manufacture the speed reducer.
 
-<br><img width="656" height="682" alt="Image" src="https://github.com/user-attachments/assets/2b8075db-c7d8-47f6-8756-1984fdd58271" />
+<br><img width="456" height="482" alt="Image" src="https://github.com/user-attachments/assets/2b8075db-c7d8-47f6-8756-1984fdd58271" />
 <br>- ```x = Rcos(t)Rrcos(t+arctan(sin((1N)t)/R/ENcos((1N)t))Ecos(Nt))```
 <br>- ```y = Rsin(t)Rrsin(t+arctan(sin((1N)t)/R/ENcos((1N)t))Esin(Nt))```
   - N = Number of elements
