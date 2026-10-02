@@ -107,6 +107,12 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
   - Wrap: A calculation (wrap-around) that causes a value to cycle back to the beginning or end when it goes outside a specified range.
   
 5. Output shaft position sensing
+<img width="657" height="537" alt="Image" src="https://github.com/user-attachments/assets/5573bd96-40c9-4fb6-8f34-3d5f550412db" />
+
+- Method for detecting the output shaft position
+  - Power is transmitted from a gear rotating in synchronization with the output shaft to a position-sensing gear via a spur gear with the same gear ratio.
+  - Then, the position of the output shaft is transmitted to the control board via an on-axis encoder mounted on the position-sensing gear.
+
 6. Reduction mechanism
 7. RS485 communication
 
