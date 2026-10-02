@@ -71,7 +71,7 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 <a href="https://www.unikeyic.com/media/datasheet/1a/ec/f21b/1a/a92c7469140eec31eee517c392211910.pdf" target="_blank">
   <img width="465" height="565" alt="Image" src="https://github.com/user-attachments/assets/64a9e644-da99-4426-9154-952752612587" /> 
 </a> <br>
-Click the image to go to the AS5047P datasheet page. [[1](#ref-1)]
+Click the image to go to the AS5047P datasheet page.
 
 
 <br>- The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position.
@@ -150,6 +150,6 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
 ## License
 
 ## References
-  <a id="ref-1"></a> [1] https://www.unikeyic.com/media/datasheet/1a/ec/f21b/1a/a92c7469140eec31eee517c392211910.pdf
+  [1] https://www.unikeyic.com/media/datasheet/1a/ec/f21b/1a/a92c7469140eec31eee517c392211910.pdf
   
   [2] https://rozum.com/encoders-in-rdrive-servos/
