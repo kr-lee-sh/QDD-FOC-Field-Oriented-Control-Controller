@@ -64,13 +64,11 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 
 4. Magnetic encoder
 - Encoder circuit used<br>
-
-
 <img width="647" height="487" alt="Image" src="https://github.com/user-attachments/assets/cc2dc32b-d313-4581-91da-5e522607cb5b" />
 
 <br>- A magnetic encoder is a sensor that detects the position and angle of a rotor by measuring the magnetic field that changes as the magnet rotates.
 
-<a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
+<a href="https://www.unikeyic.com/media/datasheet/1a/ec/f21b/1a/a92c7469140eec31eee517c392211910.pdf" target="_blank">
   <img width="465" height="565" alt="Image" src="https://github.com/user-attachments/assets/64a9e644-da99-4426-9154-952752612587" />
 </a> <br>
 Click the image to go to the AS5047P datasheet page.
