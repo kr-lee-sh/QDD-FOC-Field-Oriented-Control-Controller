@@ -62,11 +62,35 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 
 - The STM32G431CBT6 features a 170 MHz Cortex-M4 core with FPU, DSP, and mathematical acceleration capabilities (such as CORDIC), along with high-speed 12-bit ADCs and advanced timers for motor control, making it well-suited for PMSM FOC applications. By utilizing TIM1’s three-phase complementary PWM outputs and the ADC, it can control the inverter's six switching elements and perform motor measurements; this enables the execution of the complete FOC control loop -> comprising current sensing, dq-frame transformation, PI current control, and SVPWM ->directly on the MCU.
 
-4. Current sensing
-5. Magnetic encoder
-6. Output shaft position sensing
-7. Reduction mechanism
-8. RS485 communication
+4. Magnetic encoder
+<img width="647" height="487" alt="Image" src="https://github.com/user-attachments/assets/cc2dc32b-d313-4581-91da-5e522607cb5b" />
+<img width="465" height="565" alt="Image" src="https://github.com/user-attachments/assets/64a9e644-da99-4426-9154-952752612587" />
+<img width="800" height="400" alt="Image" src="https://github.com/user-attachments/assets/429b0628-dfb7-429d-a054-42781f0b411b" />
+
+[![Rozum RDrive Servo Encoder](이미지_주소.png)](https://rozum.com/encoders-in-rdrive-servos/)
+*이미지를 클릭하면 Rozum Robotics 출처 페이지로 이동합니다.*
+
+- A magnetic encoder is a sensor that detects the position and angle of a rotor by measuring the magnetic field that changes as the magnet rotates. The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position. In this setup, using a diametrically magnetized magnet causes the direction of the magnetic field detected by the sensor to rotate along with the magnet, enabling the calculation of the rotation angle. The measured mechanical angle is converted into an electrical angle—accounting for the motor's pole-pair count and electrical angle offset—and is subsequently used for coordinate transformation and current control in the FOC (Field-Oriented Control) of a PMSM.
+
+※ Operating Principle of a Diametrically Magnetized Magnet
+  1. Assume that the magnet's North (N) and South (S) poles are arranged along the diameter.
+  2. Before the magnet rotates, the magnetic field is oriented in a specific direction relative to the sensor.
+  3. When the motor shaft rotates, the magnet's N and S poles rotate along with it.
+  4. Consequently, the direction of the magnetic field vector observed at the sensor's location changes.
+  5. Magnetic sensing elements within the sensor, positioned orthogonally to each other, measure signals in two directions.
+
+  ※ The sensor calculates the angle based on these two signals.
+  - ```Bx​=Acosθm​```
+  - ```By​=Asinθm​```
+  
+  Therefore, the angle can be calculated as follows.
+  - ```θm​=atan2(By​,Bx​)```
+  
+  Here, Bₓ and By are the two orthogonal components of the magnetic field measured by the sensor, and A represents the magnitude of the magnetic field under ideal alignment conditions.
+  
+5. Output shaft position sensing
+6. Reduction mechanism
+7. RS485 communication
 
 ## Hardware
 
