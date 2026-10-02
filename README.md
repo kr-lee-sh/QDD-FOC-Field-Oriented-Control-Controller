@@ -63,20 +63,24 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 - The STM32G431CBT6 features a 170 MHz Cortex-M4 core with FPU, DSP, and mathematical acceleration capabilities (such as CORDIC), along with high-speed 12-bit ADCs and advanced timers for motor control, making it well-suited for PMSM FOC applications. By utilizing TIM1’s three-phase complementary PWM outputs and the ADC, it can control the inverter's six switching elements and perform motor measurements; this enables the execution of the complete FOC control loop -> comprising current sensing, dq-frame transformation, PI current control, and SVPWM ->directly on the MCU.
 
 4. Magnetic encoder
-- Encoder circuit used
+- Encoder circuit used<br>
+-The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position.
+
 <img width="647" height="487" alt="Image" src="https://github.com/user-attachments/assets/cc2dc32b-d313-4581-91da-5e522607cb5b" />
 
-- A magnetic encoder is a sensor that detects the position and angle of a rotor by measuring the magnetic field that changes as the magnet rotates. The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position. In this setup, using a diametrically magnetized magnet causes the direction of the magnetic field detected by the sensor to rotate along with the magnet, enabling the calculation of the rotation angle. The measured mechanical angle is converted into an electrical angle—accounting for the motor's pole-pair count and electrical angle offset—and is subsequently used for coordinate transformation and current control in the FOC (Field-Oriented Control) of a PMSM.
+<br>- A magnetic encoder is a sensor that detects the position and angle of a rotor by measuring the magnetic field that changes as the magnet rotates.
 
 <a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
   <img width="465" height="565" alt="Image" src="https://github.com/user-attachments/assets/64a9e644-da99-4426-9154-952752612587" />
 </a> <br>
 Click the image to go to the AS5047P datasheet page.
 
-<br> <a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
+<br><a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
   <img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/429b0628-dfb7-429d-a054-42781f0b411b" />
 </a> <br>
 Clicking the image will take you to the Rozum Robotics source page. <br>
+
+<br> - In this setup, using a diametrically magnetized magnet causes the direction of the magnetic field detected by the sensor to rotate along with the magnet, enabling the calculation of the rotation angle.
 
 ※ Operating Principle of a Diametrically Magnetized Magnet
   1. Assume that the magnet's North (N) and South (S) poles are arranged along the diameter.
@@ -92,7 +96,15 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
   Therefore, the angle can be calculated as follows.
   - ```θm​=atan2(By​,Bx​)```
   
-  Here, Bₓ and By are the two orthogonal components of the magnetic field measured by the sensor, and A represents the magnitude of the magnetic field under ideal alignment conditions.
+  Here, Bₓ and By are the two orthogonal components of the magnetic field measured by the sensor, and A represents the magnitude of the magnetic field under ideal alignment conditions. <br>
+
+The measured mechanical angle is converted into an electrical angle—accounting for the motor's pole-pair count and electrical angle offset—and is subsequently used for coordinate transformation and current control in the FOC (Field-Oriented Control) of a PMSM.<br>
+- ```θₑ​=wrap(pθm​+θ₀​)``` <br>
+  - θm: Measured mechanical angle
+  - p: Number of motor pole pairs
+  - θ₀: Calibration value for sensor mounting position and electrical angle reference
+  - θₑ: Electrical angle used in FOC
+  - Wrap: A calculation (wrap-around) that causes a value to cycle back to the beginning or end when it goes outside a specified range.
   
 5. Output shaft position sensing
 6. Reduction mechanism
