@@ -64,7 +64,7 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 
 4. Magnetic encoder
 - Encoder circuit used<br>
--The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position.
+
 
 <img width="647" height="487" alt="Image" src="https://github.com/user-attachments/assets/cc2dc32b-d313-4581-91da-5e522607cb5b" />
 
@@ -75,7 +75,9 @@ The motor shaft encoder is subsequently used to drive the motor via FOC control.
 </a> <br>
 Click the image to go to the AS5047P datasheet page.
 
-<br><a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
+<br>- The on-axis configuration measures the angle by aligning the centers of the magnet and the sensor with the axis of rotation, allowing for relatively simple measurement of the rotor's position.
+
+<a href="https://rozum.com/encoders-in-rdrive-servos/" target="_blank">
   <img width="800" height="500" alt="Image" src="https://github.com/user-attachments/assets/429b0628-dfb7-429d-a054-42781f0b411b" />
 </a> <br>
 Clicking the image will take you to the Rozum Robotics source page. <br>
@@ -98,7 +100,7 @@ Clicking the image will take you to the Rozum Robotics source page. <br>
   
   Here, Bₓ and By are the two orthogonal components of the magnetic field measured by the sensor, and A represents the magnitude of the magnetic field under ideal alignment conditions. <br>
 
-The measured mechanical angle is converted into an electrical angle—accounting for the motor's pole-pair count and electrical angle offset—and is subsequently used for coordinate transformation and current control in the FOC (Field-Oriented Control) of a PMSM.<br>
+- The measured mechanical angle is converted into an electrical angle—accounting for the motor's pole-pair count and electrical angle offset—and is subsequently used for coordinate transformation and current control in the FOC (Field-Oriented Control) of a PMSM.<br>
 - ```θₑ​=wrap(pθm​+θ₀​)``` <br>
   - θm: Measured mechanical angle
   - p: Number of motor pole pairs
